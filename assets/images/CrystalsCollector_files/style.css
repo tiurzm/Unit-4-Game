@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -36,6 +37,7 @@ img {
     width: 100%;
     padding: 10px;
     margin: 10px auto;
+    border: 3px solid #fffeea;
     height: auto;
 }
 
@@ -81,11 +83,9 @@ img {
         width: 95%;
     }
 }
-@media screen and (max-width: 750px){
+@media screen and (max-width: 760px){
     .paragraph{
         width: 90%;
-    }
-    .right {
-        padding: 0;
+        margin-right: 0;
     }
 }
