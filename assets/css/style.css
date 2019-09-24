@@ -1,0 +1,68 @@
+html { 
+    background: 
+    /* linear-gradient(
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1)
+        ), */
+    url(../images/cc.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color: #fffeea;
+    max-width: 300px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 3px solid #fffeea;
+}
+img {
+    width: 20%;
+    margin-right: 10px;
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    color: #fffeea;
+    padding: 5px 20px;
+    margin: 10px auto;
+    border: 3px solid #fffeea;
+    height: auto;
+}
+.yours {
+    max-width: 650px;
+    margin: 10px auto;  
+}
+
+.left {
+    float: left;
+    width: 40%;
+    margin: 0 20px;
+    padding: 10px;
+
+}
+
+.right {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.total-score {
+    padding: 20px;
+    margin: 20px auto; 
+    max-width: 650px;
+}
