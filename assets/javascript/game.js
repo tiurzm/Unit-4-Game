@@ -1,41 +1,41 @@
 $(document).ready(function(){
-    var targetScore = "";
+    // generate target score number
+    var targetScore = [];
     var randomScore = Math.round(Math.random()*120)+1;
-    targetScore = randomScore;
-    console.log(typeof targetScore);
+    targetScore.push(randomScore);
     $("#target-score").text(targetScore);
-    // console.log(targetScore);
-
+    console.log(targetScore);
+    
+    // generate data-value for images
+    var numArray = [];
     for(var i = 0; i < 4; i++){
-        var numArray = "";
-        var randomNumber= Math.round(Math.random()*11)+1;
-        numArray = randomNumber; 
-        console.log(typeof numArray);
-        $(".vl").attr("data-value", numArray);
+        var randomNumber = Math.round(Math.random()*6);
+        numArray.push(randomNumber); 
+        var value = $(".vl")[i];
+        $("#pictures").find(value).attr("data-value", numArray[i]);
+        console.log(numArray[i]);
     }; 
 
-    
-
-
-    // var counter = 0;
-    // var winScore = [];
-    // var losseScore = [];
-    // $(".image").on("click", function(){
-    //     var value = ($(this).attr("data-value"));
-    //     value = parseInt(value);
-    //     counter = counter + value;
-    //     if(counter === targetScore){
-    //         alert("you win");
-    //         winScore++; 
-    //         $("#wins").text(winScore);
-    //     } else if (counter > targetScore) {
-    //         alert("You lose!!");
-    //         console.log(losseScore);
-    //         losseScore++;
-    //         $("#losses").text(losseScore);
-    //     }
-    //     $("#total-score").text(counter);
-    // });
+    // on cliclk game
+    var counter = 0;
+    var winScore = [];
+    var losseScore = [];
+    $(".vl").on("click", function(){
+        var item = ($(this).attr("data-value"));
+        item = parseInt(item);
+        counter = counter + item;
+        if(counter === targetScore){
+            alert("you win");
+            winScore++; 
+            $("#wins").text(winScore);
+        } else if (counter > targetScore) {
+            alert("You lose!!");
+            console.log(losseScore);
+            losseScore++;
+            $("#losses").text(losseScore);
+        }
+        $("#total-score").text(counter);
+    });
 
 
 });
