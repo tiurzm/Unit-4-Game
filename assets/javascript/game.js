@@ -43,13 +43,11 @@ $(document).ready(function(){
             winScore++; 
             $(".wins").text(winScore);
             $(".win-lose").text("You Win!");
-            alert("you win");
             reset();
         } else if (counter > targetScore) {
             losseScore++;
             $(".losses").text(losseScore);
             $(".win-lose").text("You Lose!");
-            alert("You lose!!");
             reset();
         }
         $(".total-score").text(counter);
