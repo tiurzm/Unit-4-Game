@@ -10,30 +10,30 @@ $(document).ready(function(){
         $(".target-score").text(targetScore);
         console.log(targetScore);    
     }
-    start();
-
-    // generate data-value for images
+     // generate data-value for images
     function randomValue(){
         var numArray = [];
-    for(var i = 0; i < 4; i++){
-        var randomNumber = Math.round(Math.random()*12)+1;
-        numArray.push(randomNumber); 
-        var value = $(".vl")[i];
-        $("#pictures").find(value).attr("data-value", numArray[i]);
+        for(var i = 0; i < 4; i++){
+            var randomNumber = Math.round(Math.random()*12)+1;
+            numArray.push(randomNumber); 
+            var value = $(".vl")[i];
+            $("#pictures").find(value).attr("data-value", numArray[i]);
         }; 
     }
-    randomValue();
 
+    
+    // how to clean total-score?
     function reset(){
         $(".target-score").empty();
+        $(".total-score").empty();
         start();
         randomValue();
     }
-    // how to clean total-score?
-    function clear(){
-        $(".total-score").empty();
-    }
-        
+    
+    
+    // GAME
+    start();
+    randomValue();
     // on cliclk game
     $(".vl").on("click", function(){
         var item = ($(this).attr("data-value"));
@@ -42,12 +42,13 @@ $(document).ready(function(){
         if(counter === targetScore){
             winScore++; 
             $(".wins").text(winScore);
+            $(".win-lose").text("You Win!");
             alert("you win");
             reset();
         } else if (counter > targetScore) {
             losseScore++;
             $(".losses").text(losseScore);
-             
+            $(".win-lose").text("You Lose!");
             alert("You lose!!");
             reset();
         }
