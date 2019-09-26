@@ -25,7 +25,7 @@ $(document).ready(function(){
     // how to clean total-score?
     function reset(){
         $(".target-score").empty();
-        $(".total-score").empty();
+        counter = 0;
         start();
         randomValue();
     }
