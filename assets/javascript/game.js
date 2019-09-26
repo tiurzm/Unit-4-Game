@@ -1,39 +1,58 @@
 $(document).ready(function(){
-    // generate target score number
+    var counter = 0;
+    var winScore = "";
+    var losseScore = "";
     var targetScore = "";
-    targetScore = Math.round(Math.random()*120)+1;
-    $("#target-score").text(targetScore);
-    console.log(targetScore);
-    
+
+    // generate target score
+    function start(){
+        targetScore = Math.round(Math.random()*120)+1;
+        $(".target-score").text(targetScore);
+        console.log(targetScore);    
+    }
+    start();
+
     // generate data-value for images
-    var numArray = [];
+    function randomValue(){
+        var numArray = [];
     for(var i = 0; i < 4; i++){
         var randomNumber = Math.round(Math.random()*12)+1;
         numArray.push(randomNumber); 
         var value = $(".vl")[i];
         $("#pictures").find(value).attr("data-value", numArray[i]);
-    }; 
-    
+        }; 
+    }
+    randomValue();
+
+    function reset(){
+        $(".target-score").empty();
+        start();
+        randomValue();
+    }
+    // how to clean total-score?
+    function clear(){
+        $(".total-score").empty();
+    }
+        
     // on cliclk game
-    var counter = 0;
-    var winScore = "";
-    var losseScore = "";
     $(".vl").on("click", function(){
         var item = ($(this).attr("data-value"));
         item = parseInt(item);
         counter += item;
         if(counter === targetScore){
             winScore++; 
-            $("#wins").text(winScore);
+            $(".wins").text(winScore);
             alert("you win");
+            reset();
         } else if (counter > targetScore) {
             losseScore++;
-            $("#losses").text(losseScore);
+            $(".losses").text(losseScore);
+             
             alert("You lose!!");
+            reset();
         }
-        $("#total-score").text(counter);
+        $(".total-score").text(counter);
     });
-    // reset
-
+    
 });
-   
+
