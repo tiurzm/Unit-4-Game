@@ -27,7 +27,7 @@ h1{
    
 }
 img {
-    width: 20%;
+    max-width: 20%;
     margin-right: 10px;
 }
 
@@ -76,14 +76,22 @@ img {
     border-radius: 5px;
 }
 
-
 @media screen and (max-width: 768px){
+    img {
+        max-width: 22%;
+    }
     .paragraph {
+        max-width: 90%;
+    }
+    .right {
         max-width: 90%;
     }
 }
 
 @media screen and (max-width: 640px){
+    img {
+        max-width: 35%;
+    }
     .container{
         width: 95%;
     }
