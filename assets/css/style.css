@@ -44,13 +44,13 @@ img {
     padding: 0 20px;
     margin: 10px 0;
     float: left;
-    width: 30%;
+    max-width: 30%;
     border-radius: 5px;
 }
 
 .right {
     float: left;
-    width: 60%;
+    max-width: 60%;
     padding: 0 15px;
 }
 
@@ -77,14 +77,14 @@ img {
 }
 
 
-@media screen and (max-width: 980px){
-    
-}
-
 @media screen and (max-width: 768px){
-    
+    .paragraph {
+        max-width: 90%;
+    }
 }
 
 @media screen and (max-width: 640px){
-   
+    .container{
+        width: 95%;
+    }
 }
