@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     // generate target score
     function start(){
-        targetScore = Math.round(Math.random()*120)+1;
+        targetScore = Math.floor(Math.random()*120)+1;
         $(".target-score").text(targetScore);
         console.log(targetScore);    
     }
@@ -14,10 +14,11 @@ $(document).ready(function(){
     function randomValue(){
         var numArray = [];
         for(var i = 0; i < 4; i++){
-            var randomNumber = Math.round(Math.random()*12)+1;
+            var randomNumber = Math.floor(Math.random()*12)+1;
             numArray.push(randomNumber); 
             var value = $(".vl")[i];
             $("#pictures").find(value).attr("data-value", numArray[i]);
+            console.log(randomNumber);
         }; 
     }
 

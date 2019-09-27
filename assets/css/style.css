@@ -76,16 +76,15 @@ img {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 1030px){
-    .container {
-        width: 95%;
-    }
+
+@media screen and (max-width: 980px){
+    
 }
-@media screen and (max-width: 750px){
-    .paragraph{
-        width: 90%;
-    }
-    .right {
-        padding: 0;
-    }
+
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (max-width: 640px){
+   
 }
