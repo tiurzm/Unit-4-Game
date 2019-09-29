@@ -19,16 +19,13 @@ $(document).ready(function(){
             $("#pictures").find(value).attr("data-value", numArray[i]);
         }; 
     }
-
-    
-    // how to clean total-score?
+    // reset
     function reset(){
         $(".target-score").empty();
         counter = 0;
         start();
         randomValue();
     }
-    
     
     // GAME
     start();
