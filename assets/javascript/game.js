@@ -11,13 +11,10 @@ $(document).ready(function(){
     }
      // generate data-value for images
     function randomValue(){
-        var numArray = [];
-        for(var i = 0; i < 4; i++){
-            var randomNumber = Math.floor(Math.random()*12)+1;
-            numArray.push(randomNumber); 
-            var value = $(".vl")[i];
-            $("#pictures").find(value).attr("data-value", numArray[i]);
-        }; 
+        $(".vl").each(function() {
+            var randomNum = Math.floor(Math.random()*12)+1;
+            $(this).attr('data-value', randomNum);
+        });
     }
     // reset
     function reset(){
@@ -33,6 +30,7 @@ $(document).ready(function(){
     // on cliclk game
     $(".vl").on("click", function(){
         var item = ($(this).attr("data-value"));
+        console.log($(this).data("value"));
         item = parseInt(item);
         counter += item;
         if(counter === targetScore){
