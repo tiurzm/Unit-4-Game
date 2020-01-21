@@ -2,6 +2,7 @@
 
 This is a Crystals Collector game applicatio, built using HTML, CSS and jQuery.
 
+Game's link : https://tiurzm.github.io/Unit-4-Game/
 
 Directions: 
 
