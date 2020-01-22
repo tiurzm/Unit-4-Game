@@ -1,6 +1,6 @@
 # Crystals Collector
 
-This is a Crystals Collector game applicatin, built using HTML, CSS and jQuery.
+This is a Crystals Collector game application, built using HTML, CSS and jQuery.
 
 ![Home Page](./assets/images/cr.png)
 
