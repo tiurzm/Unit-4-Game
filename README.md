@@ -8,7 +8,7 @@ This is a Crystals Collector game application, built using HTML, CSS and jQuery.
 Game's link : https://tiurzm.github.io/Unit-4-Game/
 
 
-Directions: 
+## How to play: 
 
 1. You will be given a random number at the start of the game.
 
