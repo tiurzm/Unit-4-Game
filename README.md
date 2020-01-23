@@ -5,7 +5,7 @@ This is a Crystals Collector game application, built using HTML, CSS and jQuery.
 ![Home Page](./assets/images/cr.png)
 
 
-Game's link : https://tiurzm.github.io/Unit-4-Game/
+Game's link : [Crystals Collector](https://tiurzm.github.io/Unit-4-Game/).
 
 
 ## How to play: 
